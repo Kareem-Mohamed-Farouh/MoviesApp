@@ -1,0 +1,36 @@
+<section class="thebest py-5">
+    <div class="container rounded-2  bg-dark">
+        <div class="container   py-3 bg-transparent">
+            <div class="row g-3 py-4">
+                @for (movie of movieData; track $index) {
+                <div class="col-md-3">
+                    <div class="card bg-transparent position-relative h-100 ">
+
+                        <img class="card-img-top " [src]="'https://image.tmdb.org/t/p/original'+ movie.poster_path"
+                            alt="Title" />
+                        <div class="card-body text-white h-100 ">
+                            <h4 class="card-img-top  h-50">{{movie.title? movie.title : movie.name}}
+                            </h4>
+                            <!-- <h4 class="overviw  h-50">{{movie.title? movie.title : movie.name}} -->
+                            <div class=" h-50 d-flex justify-content-between align-content-end ">
+                                <div class="">
+                                    <p class="card-text fw-bolder fs-6 "> Monthly Views : </p>
+                                    <p class="card-text fw-bolder fs-6 "> Rating : </p>
+                                </div>
+                                <div class="">
+                                    <p>{{movie.popularity}} <i class=" text-warning fa-solid fa-eye"></i></p>
+                                    <p>{{movie.vote_average }}<i class="ps-1 text-danger fa-regular fa-face-smile"></i>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+    <app-resposner></app-resposner>
+</section>

@@ -1,0 +1,11 @@
+.resposner img {
+  padding: 5px;
+  border-radius: 20px;
+  background: transparent;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .resposner img {
+    width: 15%;
+  }
+}
