@@ -1,7 +1,10 @@
+
+<app-slider></app-slider>
 <div class="container py-5">
-    <div class="row  g-4">
+<h2 class=" text-center text-decoration-underline  h1 py-4 fs-1 fw-bolder "><i>NEW Movies</i></h2>
+    <div class="row  g-3">
         @for (data of Data; track $index) {
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card  overflow-hidden h-100">
                 <img class="  card-img-top " [src]="'https://image.tmdb.org/t/p/original'+ data.backdrop_path"
                     [alt]="data.backdrop_path" />

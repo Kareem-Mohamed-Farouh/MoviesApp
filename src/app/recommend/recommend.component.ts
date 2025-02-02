@@ -1,10 +1,11 @@
 import { MovieDataService } from './../services/movie-data.service';
 import { Component, inject } from '@angular/core';
 import { IMovie } from '../model/imovie';
+import { SliderComponent } from "../slider/slider.component";
 
 @Component({
   selector: 'app-recommend',
-  imports: [],
+  imports: [SliderComponent],
   templateUrl: './recommend.component.html',
   styleUrl: './recommend.component.css',
 })
