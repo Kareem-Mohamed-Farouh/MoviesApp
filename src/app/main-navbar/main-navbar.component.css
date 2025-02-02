@@ -1,3 +1,7 @@
 .navbar-brand img{
     width: 14%;
 }
+.navbar{
+    transition: all 0.6s;
+
+}
