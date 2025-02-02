@@ -1,6 +1,6 @@
+import { MovieDataService } from './../services/movie-data.service';
 import { Component, inject } from '@angular/core';
-import { RapidMovieService } from '../services/rapid-movie.service';
-import { IProduct } from '../model/rabid-api';
+import { IMovie } from '../model/imovie';
 
 @Component({
   selector: 'app-recommend',
@@ -9,14 +9,14 @@ import { IProduct } from '../model/rabid-api';
   styleUrl: './recommend.component.css',
 })
 export class RecommendComponent {
-  Data!: IProduct[];
-  private readonly rapidMovieService = inject(RapidMovieService);
-  getrapidData() {
-    this.rapidMovieService.getRapidMovie().subscribe({
+  Data!: IMovie[];
+  private readonly movieDataService = inject(MovieDataService);
+  getData() {
+    this.movieDataService.getMovieData().subscribe({
       next: (res) => {
         console.log(res);
         // let data = res;
-        this.Data = res;
+        this.Data = res.results;
       },
 
       error: (err) => {
@@ -46,6 +46,6 @@ export class RecommendComponent {
   //     });
   //   }
   ngOnInit(): void {
-    this.getrapidData();
+    this.getData();
   }
 }

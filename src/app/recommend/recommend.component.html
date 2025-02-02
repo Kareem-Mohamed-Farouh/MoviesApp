@@ -1,17 +1,17 @@
 <div class="container py-5">
-    <h1 class="text-center pb-4"> الافلام مش جايبة همها قولنا اما نغير النشاط </h1>
     <div class="row  g-4">
         @for (data of Data; track $index) {
         <div class="col-md-3">
-            <div class="card h-100">
-                <img class="card-img-top p-2" [src]="data.image" [alt]="data.image" />
+            <div class="card  overflow-hidden h-100">
+                <img class="  card-img-top " [src]="'https://image.tmdb.org/t/p/original'+ data.backdrop_path"
+                    [alt]="data.backdrop_path" />
                 <div class="card-body ">
-                    <p class="card-title  ">{{data.title}}</p>
-                    <p class="item-price"> price: <span
+                    <p class="card-title h5 ">{{data.name ?? data.title}}</p>
+                    <!-- <p class="item-price"> price: <span
                             class="text-decoration-line-through fw-bold text-danger ms-2  me-5">
                             $400.00</span> <b><span class="text-success">$</span>
-                            {{data.price}}
-                        </b></p>
+                            {{data.}}
+                        </b></p> -->
 
                     <div class="star-rating    ms-2">
                         Reating:
@@ -23,7 +23,7 @@
                             <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <a href="#" class="btn btn-warning">{{data.vote_average}} </a>
                     <!-- <p class="card-text">{{data.description}}</p> -->
                 </div>
 

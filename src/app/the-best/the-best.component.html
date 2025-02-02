@@ -4,10 +4,10 @@
             <div class="row g-3 py-4">
                 @for (movie of movieData; track $index) {
                 <div class="col-md-3">
-                    <div class="card bg-transparent position-relative h-100 ">
+                    <div class=" card bg-transparent position-relative h-100 ">
 
-                        <img class="card-img-top " [src]="'https://image.tmdb.org/t/p/original'+ movie.poster_path"
-                            alt="Title" />
+                        <div class=""><img class="   card-img-top "
+                                [src]="'https://image.tmdb.org/t/p/original'+ movie.poster_path" alt="Title" /></div>
                         <div class="card-body text-white h-100 ">
                             <h4 class="card-img-top  h-50">{{movie.title? movie.title : movie.name}}
                             </h4>

@@ -1,6 +1,9 @@
-img {
-  height: 220px;
+
+.card-img-top{
+  transition: all 1s;
 }
-.card-title {
-  height: 32%;
+
+
+.card-img-top:hover{
+transform: scale(1.1);
 }
